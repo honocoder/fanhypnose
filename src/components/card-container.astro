@@ -1,35 +1,61 @@
 ---
 import Card from './Card.astro';
+
+import Emotional from '../images/cards-icons/libération.png';
+import Personal from '../images/cards-icons/développement.png';
+import Tobacco from '../images/cards-icons/arreter-de-fumer.png';
+import Addiction from '../images/cards-icons/no-drugs.png';
+import SexualTroubles from '../images/cards-icons/sexual-troubles.png';
+import Pain from '../images/cards-icons/pain.png';
+import Link from './ui/link.astro';
 ---
 
-<article>
+<article
+    class='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 w-3/4 mx-auto my-6'
+>
     <Card
         title='Libération émotionnelle'
         body='Libérez-vous de vos phobies, peurs et de vos émotions négatives : stress, troubles du sommeil, colère...'
         href='#'
+        image={Emotional}
     />
 
     <Card
         title='Développement personnel'
         body="Grâce à une ou quelques séances d\'hypnose, vous pourrez développer votre estime et votre confiance en vous."
         href='#'
+        image={Personal}
+    />
+
+    <Card
+        title='Arrêt du tabac'
+        body="L'hypnose est un des moyens les plus efficaces pour arrêter une dépendance au tabac."
+        href='#'
+        image={Tobacco}
     />
 
     <Card
         title='Libération des addictions'
         body="L'hypnose peut aussi être utilisée pour lutter contre toute autre addiction : drogues, alcool, réseaux sociaux, jeux..."
         href='#'
+        image={Addiction}
     />
 
     <Card
         title='Troubles sexuels'
         body="L'hypnose appliquée aux troubles sexuels peut vous aider à surmonter des problèmes ou des doutes."
         href='#'
+        image={SexualTroubles}
     />
 
     <Card
         title='Gestion de la douleur'
         body="Une ou des séances d'hypnose peuvent vous aider à atténuer vos douleurs physiques."
         href='#'
+        image={Pain}
     />
 </article>
+
+<div class='flex justify-center items-center my-6'>
+    <Link href='#'>Voir les prestations</Link>
+</div>
