@@ -4,8 +4,8 @@ import { Image } from '@astrojs/image/components';
 import HelpImage from '../images/help.jpg';
 ---
 
-<article class='flex flex-row my-10'>
-    <div class='w-1/2'>
+<article class='flex flex-col lg:flex-row py-20'>
+    <div class='w-full lg:w-1/2'>
         <Image
             src={HelpImage}
             alt="Les bénéfices de l'hypnothérapie"
@@ -15,11 +15,11 @@ import HelpImage from '../images/help.jpg';
             class='mx-auto'
         />
     </div>
-    <div class='w-1/2'>
-        <h3 class='text-4xl font-semibold my-6 w-1/2'>
+    <div class='w-full lg:w-1/2'>
+        <h3 class='text-4xl font-semibold my-6 mx-6 lg:w-3/4'>
             Les bienfaits de l'hypnothérapie
         </h3>
-        <p class='text-justify w-1/2 mb-6 mt-10'>
+        <p class='text-justify lg:w-3/4 mx-6 mb-6 mt-10'>
             L’hypnothérapie peut être utile à tout le monde.<br /> Que vous ayez
             des troubles particuliers (traumatismes, phobies, addictions, pensées
             négatives…) ou que vous ayez simplement envie de vous détendre alors
