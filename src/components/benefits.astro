@@ -1,0 +1,33 @@
+---
+import Link from './ui/link.astro';
+import { Image } from '@astrojs/image/components';
+import HelpImage from '../images/help.jpg';
+---
+
+<article class='flex flex-row my-10'>
+    <div class='w-1/2'>
+        <Image
+            src={HelpImage}
+            alt="Les bénéfices de l'hypnothérapie"
+            height={400}
+            width={500}
+            fit='contain'
+            class='mx-auto'
+        />
+    </div>
+    <div class='w-1/2'>
+        <h3 class='text-4xl font-semibold my-6 w-1/2'>
+            Les bienfaits de l'hypnothérapie
+        </h3>
+        <p class='text-justify w-1/2 mb-6 mt-10'>
+            L’hypnothérapie peut être utile à tout le monde.<br /> Que vous ayez
+            des troubles particuliers (traumatismes, phobies, addictions, pensées
+            négatives…) ou que vous ayez simplement envie de vous détendre alors
+            que vous vivez une période de stress, une séance d’hypnothérapie – parfois
+            plusieurs – peut vous aider à vous libérer de ces poids ou de ce stress.
+        </p>
+    </div>
+</article>
+<div class='flex justify-center items-center my-6'>
+    <Link href='#'>En apprendre plus</Link>
+</div>
