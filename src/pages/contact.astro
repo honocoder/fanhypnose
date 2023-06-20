@@ -1,0 +1,58 @@
+---
+import { Image } from '@astrojs/image/components';
+
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/contact/ContactForm.astro';
+import Map from '../components/contact/Map.astro';
+import Hours from '../components/contact/Hours.astro';
+
+import Mail from '../images/contact-icons/email.png';
+import Phone from '../images/contact-icons/phone.png';
+import Pin from '../images/contact-icons/pin.png';
+---
+
+<Layout title='FanHypnose - Contact'>
+    <div class='grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16'>
+        <div>
+            <h2 class='font-medium text-2xl text-gray-800'>Contact</h2>
+            <p class='text-lg leading-relaxed text-slate-500 mt-3'>
+                Vous avez une question ? C'est ici que ça se passe. Vous pouvez
+                prendre rendez-vous ici, mais c'est plus simple si vous passez
+                par Resalib 😊
+            </p>
+            <div class='mt-5'>
+                <div class='flex items-center mt-2 space-x-2 text-gray-600'>
+                    <Image
+                        src={Phone}
+                        alt='Phone icon'
+                        height={24}
+                        width={24}
+                    />
+                    <a href='tel:+33612488314'>06 12 48 83 14</a>
+                </div>
+
+                <div class='flex items-center mt-2 space-x-2 text-gray-600'>
+                    <Image src={Mail} alt='Mail icon' height={24} width={24} />
+                    <a href='mailto:contact@fanhypnose.fr'
+                        >contact@fanhypnose.fr</a
+                    >
+                </div>
+
+                <div
+                    class='flex items-center mt-2 space-x-2 text-gray-600 mb-10'
+                >
+                    <Image src={Pin} alt='Pin icon' height={24} width={24} />
+                    <span>Mon cabinet se trouve à Frocourt, dans l'Oise</span>
+                </div>
+                <Map />
+            </div>
+        </div>
+        <div>
+            <h4 class='font-medium text-2xl text-gray-800'>
+                Formulaire de contact
+            </h4>
+            <ContactForm />
+        </div>
+    </div>
+    <Hours />
+</Layout>
