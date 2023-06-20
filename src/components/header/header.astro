@@ -11,13 +11,13 @@ const menuitems = [
     },
     {
         title: 'Prestations et tarifs',
-        path: '#',
-        children: [
-            { title: '1', path: '/' },
-            { title: '2', path: '#' },
-            { title: '3', path: '#' },
-            { title: '4', path: '/404' },
-        ],
+        path: '/prestations',
+        // children: [
+        //     { title: '1', path: '/' },
+        //     { title: '2', path: '#' },
+        //     { title: '3', path: '#' },
+        //     { title: '4', path: '/404' },
+        // ],
     },
     {
         title: 'À propos',
@@ -49,7 +49,7 @@ const menuitems = [
             </div>
             <MenuItems class='hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0'>
                 <ul class='flex flex-col lg:flex-row lg:gap-3'>
-                    {
+                    <!-- {
                         menuitems.map((item, index) => (
                             <>
                                 {item.children && (
@@ -73,6 +73,18 @@ const menuitems = [
                                     </li>
                                 )}
                             </>
+                        ))
+                    } -->
+                    {
+                        menuitems.map((item, index) => (
+                            <li>
+                                <a
+                                    href={item.path}
+                                    class='flex lg:px-3 py-2 text-gray-600 hover:text-gray-900'
+                                >
+                                    {item.title}
+                                </a>
+                            </li>
                         ))
                     }
                 </ul>
