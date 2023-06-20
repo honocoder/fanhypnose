@@ -1,0 +1,29 @@
+---
+import { Image } from '@astrojs/image/components';
+
+export interface Props {
+    title: string;
+    price: string;
+    body: string;
+    image: string;
+}
+
+const { title, price, body, image } = Astro.props;
+---
+
+<div class='flex bg-white rounded-lg shadow-lg p-4 my-6'>
+    <div class='flex-shrink-0'>
+        <Image src={image} alt={title} width={50} height={50} />
+    </div>
+    <div class='ml-4'>
+        <h2 class='font-semibold text-xl'>
+            {title}
+        </h2>
+        <p class='text-gray-600'>
+            {price}
+        </p>
+        <p class='mt-2'>
+            {body}
+        </p>
+    </div>
+</div>
