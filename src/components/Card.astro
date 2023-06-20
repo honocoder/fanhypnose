@@ -7,11 +7,11 @@ export interface Props {
 	image: string;
 }
 
-const { href, title, body, image } = Astro.props;
+const { title, body, image } = Astro.props;
 ---
 
 <li class='link-card'>
-	<a href={href}>
+	<div class="old-link">
 		<Image src={image} alt={title} width={50} height={50} class='mx-auto' />
 		<h2 class='text-center font-semibold text-xl'>
 			{title}
@@ -19,7 +19,7 @@ const { href, title, body, image } = Astro.props;
 		<p class='text-justify'>
 			{body}
 		</p>
-	</a>
+	</div>
 </li>
 <style>
 	.link-card {
@@ -36,7 +36,7 @@ const { href, title, body, image } = Astro.props;
 			0 2px 4px -2px rgba(0, 0, 0, 0.1);
 	}
 
-	.link-card > a {
+	.old-link {
 		width: 100%;
 		text-decoration: none;
 		line-height: 1.4;
