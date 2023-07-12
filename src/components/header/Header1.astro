@@ -4,7 +4,7 @@ import Link from '@components/ui/Link1.astro';
 import { Image } from '@astrojs/image/components';
 import { Astronav, MenuItems, MenuIcon } from 'astro-navbar';
 
-import Logo from '@images/Logo.png'
+import Logo from '@images/Logo.png';
 
 const menuitems = [
     {
@@ -14,12 +14,6 @@ const menuitems = [
     {
         title: 'Prestations et tarifs',
         path: '/prestations',
-        // children: [
-        //     { title: '1', path: '/' },
-        //     { title: '2', path: '#' },
-        //     { title: '3', path: '#' },
-        //     { title: '4', path: '/404' },
-        // ],
     },
     {
         title: 'À propos',
@@ -41,7 +35,12 @@ const menuitems = [
         <Astronav>
             <div class='flex items-center justify-between'>
                 <a href='/' class='text-lg'>
-                    <Image src={Logo} alt="Logo FanHypnose" width={120} height={120} />
+                    <Image
+                        src={Logo}
+                        alt='Logo FanHypnose'
+                        width={120}
+                        height={120}
+                    />
                 </a>
                 <div class='block lg:hidden'>
                     <MenuIcon class='w-4 h-4 text-gray-800' />
@@ -63,7 +62,13 @@ const menuitems = [
                     }
                 </ul>
                 <div class='lg:hidden flex items-center mt-3 gap-4'>
-                    <Link href='#' size='md' block>Prendre RDV</Link>
+                    <Link
+                        href='https://www.resalib.fr/praticien/46307-fanhypnose-hypnotherapeute-frocourt#newrdvmodal'
+                        size='md'
+                        block
+                    >
+                        Prendre RDV
+                    </Link>
                 </div>
             </MenuItems>
         </Astronav>
