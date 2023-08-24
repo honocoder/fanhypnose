@@ -7,80 +7,79 @@ import { Astronav, MenuItems, MenuIcon } from 'astro-navbar';
 import Logo from '@images/Logo.png';
 
 const menuitems = [
-    {
-        title: 'Accueil',
-        path: '/',
-    },
-    {
-        title: 'Prestations et tarifs',
-        path: '/prestations',
-    },
-    {
-        title: 'À propos',
-        path: '/about',
-    },
-    {
-        title: 'F.A.Q',
-        path: '/faq',
-    },
-    {
-        title: 'Contact',
-        path: '/contact',
-    },
+  {
+    title: 'Accueil',
+    path: '/',
+  },
+  {
+    title: 'Prestations et tarifs',
+    path: '/prestations',
+  },
+  {
+    title: 'À propos',
+    path: '/about',
+  },
+  {
+    title: 'F.A.Q',
+    path: '/faq',
+  },
+  {
+    title: 'Carte cadeau',
+    path: '/carte-cadeau',
+  },
+  {
+    title: 'Contact',
+    path: '/contact',
+  },
 ];
 ---
 
 <Container class='py-4 sticky top-0 z-50 bg-[#FAFEFF]'>
-    <header class='flex flex-col lg:flex-row justify-between items-center my-5'>
-        <Astronav>
-            <div class='flex items-center justify-between'>
-                <a href='/' class='text-lg'>
-                    <Image
-                        src={Logo}
-                        alt='Logo FanHypnose'
-                        width={120}
-                        height={120}
-                    />
-                </a>
-                <div class='block lg:hidden'>
-                    <MenuIcon class='w-4 h-4 text-gray-800' />
-                </div>
-            </div>
-            <MenuItems class='hidden lg:w-auto mt-2 lg:flex lg:mt-0'>
-                <ul class='flex flex-col lg:flex-row lg:gap-3'>
-                    {
-                        menuitems.map((item, index) => (
-                            <li>
-                                <a
-                                    href={item.path}
-                                    class='flex lg:px-3 py-2 text-gray-600 hover:text-gray-900'
-                                >
-                                    {item.title}
-                                </a>
-                            </li>
-                        ))
-                    }
-                </ul>
-                <div class='lg:hidden flex items-center mt-3 gap-4'>
-                    <Link
-                        href='https://www.resalib.fr/praticien/46307-fanhypnose-hypnotherapeute-frocourt#newrdvmodal'
-                        size='md'
-                        block
-                    >
-                        Prendre RDV
-                    </Link>
-                </div>
-            </MenuItems>
-        </Astronav>
-        <div>
-            <div class='hidden lg:flex items-center gap-4'>
-                <Link
-                    href='https://www.resalib.fr/praticien/46307-fanhypnose-hypnotherapeute-frocourt#newrdvmodal'
-                    size='md'
-                >
-                    Prendre RDV
-                </Link>
-            </div>
+  <header class='flex flex-col lg:flex-row justify-between items-center my-5'>
+    <Astronav>
+      <div class='flex items-center justify-between'>
+        <a href='/' class='text-lg'>
+          <Image src={Logo} alt='Logo FanHypnose' width={120} height={120} />
+        </a>
+        <div class='block lg:hidden'>
+          <MenuIcon class='w-4 h-4 text-gray-800' />
         </div>
-    </header>
+      </div>
+      <MenuItems class='hidden lg:w-auto mt-2 lg:flex lg:mt-0'>
+        <ul class='flex flex-col lg:flex-row lg:gap-3'>
+          {
+            menuitems.map((item, index) => (
+              <li>
+                <a
+                  href={item.path}
+                  class='flex lg:px-3 py-2 text-gray-600 hover:text-gray-900'
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <div class='lg:hidden flex items-center mt-3 gap-4'>
+          <Link
+            href='https://www.resalib.fr/praticien/46307-fanhypnose-hypnotherapeute-frocourt#newrdvmodal'
+            size='md'
+            block
+          >
+            Prendre RDV
+          </Link>
+        </div>
+      </MenuItems>
+    </Astronav>
+    <div>
+      <div class='hidden lg:flex items-center gap-4'>
+        <Link
+          href='https://www.resalib.fr/praticien/46307-fanhypnose-hypnotherapeute-frocourt#newrdvmodal'
+          size='md'
+        >
+          Prendre RDV
+        </Link>
+      </div>
+    </div>
+  </header>
 </Container>
